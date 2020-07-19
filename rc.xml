@@ -42,7 +42,7 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>Arc-Dark</name>
+    <name>PacBang</name>
     <titleLayout>LIC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -120,14 +120,16 @@
 
        use obconf if you want to change these without having to log out
        and back in -->
-    <number>5</number>
+    <number>7</number>
     <firstdesk>1</firstdesk>
     <names>
-      <name>  1  </name>
-      <name>  2  </name>
-      <name>  3  </name>
-      <name>  4  </name>
-      <name>  5  </name>
+      <name>1</name>
+      <name>2</name>
+      <name>3</name>
+      <name>4</name>
+      <name>5</name>
+      <name>6</name>
+      <name>7</name>
     </names>
     <popupTime>333</popupTime>
     <!-- The number of milliseconds to show the popup for when switching
@@ -253,6 +255,16 @@
         <to>5</to>
       </action>
     </keybind>
+    <keybind key="W-F6">
+      <action name="GoToDesktop">
+        <to>6</to>
+      </action>
+    </keybind>
+    <keybind key="W-F7">
+      <action name="GoToDesktop">
+        <to>7</to>
+      </action>
+    </keybind>
     <keybind key="W-d">
       <action name="ToggleShowDesktop"/>
     </keybind>
@@ -280,109 +292,146 @@
       </action>
     </keybind>
     <!-- Keybindings for tiling windows -->
-	<keybind key="W-Left">
-		<action name="Unmaximize" />
-		<action name="MoveResizeTo">
-			<x>0</x>
-			<y>0</y>
-			<width>50%</width>
-			<height>100%</height>
-		</action>
-	</keybind>
-	<keybind key="W-Right">
-		<action name="Unmaximize" />
-		<action name="MoveResizeTo">
-			<x>-0</x>
-			<y>0</y>
-			<width>50%</width>
-			<height>100%</height>
-		</action>
-	</keybind>
-	<keybind key="W-Up">
-		<action name="Unmaximize" />
-		<action name="MoveResizeTo">
-			<x>0</x>
-			<y>0</y>
-			<width>100%</width>
-			<height>50%</height>
-		</action>
-	</keybind>
-	<keybind key="W-Down">
-		<action name="Unmaximize" />
-		<action name="MoveResizeTo">
-			<x>0</x>
-			<y>-0</y>
-			<width>100%</width>
-			<height>50%</height>
-		</action>
-	</keybind>
+    <keybind key="W-Left">
+      <action name="Unmaximize"/>
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>0</y>
+        <width>50%</width>
+        <height>100%</height>
+      </action>
+    </keybind>
+    <keybind key="W-Right">
+      <action name="Unmaximize"/>
+      <action name="MoveResizeTo">
+        <x>-0</x>
+        <y>0</y>
+        <width>50%</width>
+        <height>100%</height>
+      </action>
+    </keybind>
+    <keybind key="W-Up">
+      <action name="Unmaximize"/>
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>0</y>
+        <width>100%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+    <keybind key="W-Down">
+      <action name="Unmaximize"/>
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>-0</y>
+        <width>100%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
     <!-- Keybindings for tiling windows in corners -->
-	<keybind key="W-A-Up">
-		<action name="Unmaximize" />
-		<action name="MoveResizeTo">
-			<x>0</x>
-			<y>0</y>
-			<width>50%</width>
-			<height>50%</height>
-		</action>
-	</keybind>
-	<keybind key="W-A-Left">
-		<action name="Unmaximize" />
-		<action name="MoveResizeTo">
-			<x>0</x>
-			<y>-0</y>
-			<width>50%</width>
-			<height>50%</height>
-		</action>
-	</keybind>
-	<keybind key="W-A-Down">
-		<action name="Unmaximize" />
-		<action name="MoveResizeTo">
-			<x>-0</x>
-			<y>-0</y>
-			<width>50%</width>
-			<height>50%</height>
-		</action>
-	</keybind>
-	<keybind key="W-A-Right">
-		<action name="Unmaximize" />
-		<action name="MoveResizeTo">
-			<x>-0</x>
-			<y>0</y>
-			<width>50%</width>
-			<height>50%</height>
-		</action>
-	</keybind>
-	<!-- Keybindings for tiling a window directly in the center of the screen -->
-	<keybind key="W-c">
-		<action name="Unmaximize" />
-		<action name="MoveResizeTo">
-			<x>25%</x>
-			<y>25%</y>
-			<width>50%</width>
-			<height>50%</height>
-		</action>
-	</keybind>
-	<!-- Tile a TINY WINDOW -->
-	<keybind key="W-t">
-		<action name="Unmaximize" />
-		<action name="MoveResizeTo">
-			<x>25%</x>
-			<y>35%</y>
-			<width>50%</width>
-			<height>25%</height>
-		</action>
-	</keybind>
-	<!-- Tile a BIG CENTER Window  -->
-	<keybind key="W-b">
-		<action name="Unmaximize" />
-		<action name="MoveResizeTo">
-			<x>12%</x>
-			<y>1%</y>
-			<width>75%</width>
-			<height>99%</height>
-		</action>
-	</keybind>
+    <keybind key="W-A-Up">
+      <action name="Unmaximize"/>
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>0</y>
+        <width>50%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+    <keybind key="W-A-Left">
+      <action name="Unmaximize"/>
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>-0</y>
+        <width>50%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+    <keybind key="W-A-Down">
+      <action name="Unmaximize"/>
+      <action name="MoveResizeTo">
+        <x>-0</x>
+        <y>-0</y>
+        <width>50%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+    <keybind key="W-A-Right">
+      <action name="Unmaximize"/>
+      <action name="MoveResizeTo">
+        <x>-0</x>
+        <y>0</y>
+        <width>50%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+    <!-- Keybindings for TILING TINY WINDOWS in the CORNERS -->
+    <keybind key="W-C-Up">
+      <action name="Unmaximize"/>
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>0</y>
+        <width>40%</width>
+        <height>25%</height>
+      </action>
+    </keybind>
+    <keybind key="W-C-Left">
+      <action name="Unmaximize"/>
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>-0</y>
+        <width>40%</width>
+        <height>25%</height>
+      </action>
+    </keybind>
+    <keybind key="W-C-Down">
+      <action name="Unmaximize"/>
+      <action name="MoveResizeTo">
+        <x>-0</x>
+        <y>-0</y>
+        <width>40%</width>
+        <height>25%</height>
+      </action>
+    </keybind>
+    <keybind key="W-C-Right">
+      <action name="Unmaximize"/>
+      <action name="MoveResizeTo">
+        <x>-0</x>
+        <y>0</y>
+        <width>40%</width>
+        <height>25%</height>
+      </action>
+    </keybind>
+    <!-- Keybindings for tiling a window directly in the center of the screen -->
+    <keybind key="W-c">
+      <action name="Unmaximize"/>
+      <action name="MoveResizeTo">
+        <x>25%</x>
+        <y>25%</y>
+        <width>50%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+    <!-- Tile a TINY WINDOW -->
+    <keybind key="W-t">
+      <action name="Unmaximize"/>
+      <action name="MoveResizeTo">
+        <x>25%</x>
+        <y>35%</y>
+        <width>50%</width>
+        <height>25%</height>
+      </action>
+    </keybind>
+    <!-- Tile a BIG CENTER Window  -->
+    <keybind key="W-b">
+      <action name="Unmaximize"/>
+      <action name="MoveResizeTo">
+        <x>12%</x>
+        <y>1%</y>
+        <width>75%</width>
+        <height>99%</height>
+      </action>
+    </keybind>
     <!-- -->
     <!-- Take a screenshot of the current window with scrot when Alt+Print are pressed -->
     <keybind key="A-Print">
@@ -474,10 +523,16 @@
         <command>st ranger</command>
       </action>
     </keybind>
+    <!-- CALCULATOR -->
+    <keybind key="W-A-c">
+      <action name="Execute">
+        <command>gnome-calculator</command>
+      </action>
+    </keybind>
     <!-- Screen Locker -->
     <keybind key="W-l">
       <action name="Execute">
-        <command>slock</command>
+        <command>lockscreen -- scrot</command>
       </action>
     </keybind>
     <!-- -->
@@ -834,7 +889,6 @@
        just don't make menu ids clash or, well, it'll be kind of pointless -->
     <!-- default menu file (or custom one in $HOME/.config/openbox/) -->
     <!-- system menu files on Debian systems -->
-    <file>/var/lib/openbox/debian-menu.xml</file>
     <file>menu.xml</file>
     <hideDelay>200</hideDelay>
     <!-- if a press-release lasts longer than this setting (in milliseconds), the

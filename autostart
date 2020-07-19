@@ -1,0 +1,11 @@
+#!/bin/bash
+#
+#
+sleep 1; nitrogen --restore & 
+#xscreensaver -nosplash & 
+sleep 1; tint2 & 
+sleep 1; picom & 
+sleep 1; sh /home/cheminacci/fixScroll.sh &
+sleep 1; conky -q &
+#sleep 1; volumeicon &
+#pnmixer -q 
